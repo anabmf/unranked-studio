@@ -1,0 +1,276 @@
+/* Unranked Studio - shared styles for index, support and privacy pages.
+   Palette is taken from the rabbit art in the game. */
+
+:root {
+    --navy: #2B5593;
+    --navy-dark: #1E3D6B;
+    --teal: #379A9F;
+    --teal-dark: #2A7A7E;
+    --gold: #FFCB4C;
+    --gold-dark: #E8B02C;
+    --cream: #FAF6EA;
+    --paper: #FFFDF6;
+    --text: #3A4256;
+    --muted: #6B7285;
+    --line: rgba(43, 85, 147, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    color: var(--text);
+    margin: 0;
+    background-color: var(--cream);
+}
+
+h1, h2, h3, .brand {
+    font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: var(--navy);
+    letter-spacing: 0.3px;
+}
+
+a { color: var(--teal-dark); }
+a:hover { color: var(--navy); }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.container.narrow { max-width: 720px; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+    background-color: var(--navy);
+    color: white;
+}
+.topbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.topbar .brand {
+    color: var(--gold);
+    font-size: 1.35em;
+    text-decoration: none;
+}
+.topbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+.topbar nav a:hover,
+.topbar nav a[aria-current="page"] { border-bottom-color: var(--gold); }
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: transform 0.15s, background-color 0.15s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background-color: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+.btn-primary:hover { background-color: var(--gold-dark); border-color: var(--gold-dark); color: var(--navy-dark); }
+.btn-teal { background-color: var(--teal); color: white; }
+.btn-teal:hover { background-color: var(--teal-dark); color: white; }
+.btn-soon {
+    background-color: transparent;
+    color: var(--navy);
+    border-color: var(--navy);
+    cursor: default;
+}
+.btn-soon:hover { transform: none; }
+
+/* ---------- Home: hero ---------- */
+.hero {
+    background: linear-gradient(180deg, #DDEFEF 0%, var(--cream) 100%);
+    padding: 56px 0 40px;
+    text-align: center;
+}
+.hero-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+.app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 27px;
+    box-shadow: 0 8px 24px rgba(30, 61, 107, 0.25);
+}
+.hero h1 { font-size: 4em; margin: 0; line-height: 1.05; }
+.studio-tag {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: var(--teal-dark);
+    margin: 0 0 8px;
+}
+.tagline {
+    font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+    color: var(--teal-dark);
+    font-size: 1.45em;
+    margin: 8px 0 18px;
+}
+.hero p.pitch { max-width: 680px; margin: 0 auto 28px; font-size: 1.08em; }
+.cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Sections ---------- */
+section.block { padding: 36px 0; }
+section.block > .container > h2 { font-size: 2.3em; margin: 0 0 8px; text-align: center; }
+.lead { text-align: center; max-width: 700px; margin: 0 auto 28px; color: var(--muted); }
+
+.panel {
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 32px 36px;
+    box-shadow: 0 4px 15px rgba(30, 61, 107, 0.05);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+.feature {
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px;
+}
+.feature h3 { margin: 0 0 6px; font-size: 1.3em; }
+.feature p { margin: 0; font-size: 0.97em; }
+.feature .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Lilita One', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* ---------- Story ---------- */
+.story {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    align-items: center;
+}
+.story img { width: 100%; height: auto; display: block; }
+.story h2 { text-align: left; margin-top: 0; }
+.story p { margin: 0 0 12px; }
+
+/* ---------- Team ---------- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 18px;
+}
+.member {
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+}
+.photo {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #E9F3F3;
+    border: 3px dashed var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal-dark);
+    font-size: 0.85em;
+    font-weight: 600;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.member h3 { margin: 0; font-size: 1.2em; }
+.member .role { color: var(--teal-dark); font-weight: 600; font-size: 0.9em; margin: 2px 0 8px; }
+.member .bio { margin: 0; font-size: 0.92em; color: var(--muted); }
+
+/* ---------- Document pages (support / privacy) ---------- */
+.doc { padding: 40px 0 20px; }
+.doc h1 { font-size: 2.6em; margin: 0 0 6px; }
+.doc h2 { font-size: 1.5em; margin: 34px 0 6px; }
+.doc .updated { color: var(--muted); font-size: 0.92em; margin-top: 0; }
+.doc p, .doc ul { margin-top: 0; }
+.doc li { margin-bottom: 8px; }
+.doc hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+
+.contact-card {
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: center;
+    margin: 24px 0 8px;
+}
+.contact-card p { margin: 0 0 16px; }
+.contact-card .small { font-size: 0.9em; color: var(--muted); margin: 14px 0 0; }
+
+details {
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 4px 20px;
+    margin-bottom: 10px;
+}
+details[open] { padding-bottom: 12px; }
+summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--navy);
+    padding: 12px 0;
+}
+details p, details ul { margin: 0 0 10px; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+    margin-top: 60px;
+    padding: 32px 20px 40px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 0.92em;
+    color: var(--muted);
+}
+.site-footer a { margin: 0 12px; text-decoration: none; font-weight: 600; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer p { margin: 14px 0 0; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+    .hero h1 { font-size: 2.8em; }
+    .hero-art { flex-direction: column; gap: 14px; }
+    .panel { padding: 24px; }
+    .story { grid-template-columns: 1fr; text-align: center; }
+    .story img { max-width: 180px; margin: 0 auto; }
+    .story h2 { text-align: center; }
+    .topbar nav a { margin-left: 14px; }
+    .btn { width: 100%; }
+}
