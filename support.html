@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Support - Trick or Sprint" data-title-pt="Suporte - Trick or Sprint">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - Trick or Sprint</title>
     <meta name="description" content="Get help with Trick or Sprint, a positional card game by Unranked Studio: how to play, troubleshooting and contact information.">
+
+    <script>
+        (function() {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var urlLang = params.get('lang');
+                var saved = urlLang || localStorage.getItem('unranked_lang');
+                var lang = (saved === 'pt' || saved === 'en') ? saved : 'en';
+                if (urlLang === 'pt' || urlLang === 'en') {
+                    localStorage.setItem('unranked_lang', lang);
+                }
+                document.documentElement.lang = lang;
+                var title = document.documentElement.getAttribute('data-title-' + lang);
+                if (title) document.title = title;
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +34,19 @@
     <div class="container">
         <a href="index.html" class="brand">Unranked Studio</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="support.html" aria-current="page">Support</a>
-            <a href="privacy.html">Privacy</a>
+            <a href="index.html"><span data-lang="en">Home</span><span data-lang="pt">Início</span></a>
+            <a href="support.html" aria-current="page"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+            <a href="privacy.html"><span data-lang="en">Privacy</span><span data-lang="pt">Privacidade</span></a>
+            <div class="lang-switch" role="group" aria-label="Language / Idioma">
+                <button type="button" class="lang-btn" data-set-lang="en" title="English">EN</button>
+                <button type="button" class="lang-btn" data-set-lang="pt" title="Português">PT</button>
+            </div>
         </nav>
     </div>
 </header>
 
 <main class="doc">
-    <div class="container narrow">
+    <div class="container narrow" data-lang="en">
 
         <h1>Trick or Sprint Support</h1>
         <p>Stuck on a battle, found a bug, or have an idea for the game? We're happy to help. Write to us and we'll get back to you as soon as we can.</p>
@@ -121,14 +142,124 @@
         </details>
 
     </div>
+
+    <div class="container narrow" data-lang="pt">
+
+        <h1>Suporte - Trick or Sprint</h1>
+        <p>Travou em uma batalha, encontrou um bug ou tem uma ideia para o jogo? Ficaremos felizes em ajudar. Escreva para nós e responderemos o mais rápido possível.</p>
+
+        <div class="contact-card">
+            <p>Dúvidas, relatos de bugs e sugestões:</p>
+            <a href="mailto:studio.unranked@gmail.com?subject=Suporte%20Trick%20or%20Sprint" class="btn btn-primary">Falar com o Suporte</a>
+            <p class="small">studio.unranked@gmail.com</p>
+        </div>
+
+        <h2>Relatando um problema</h2>
+        <p>Para nos ajudar a resolver mais rápido, inclua no seu e-mail:</p>
+        <ul>
+            <li>O modelo do seu dispositivo (por exemplo, iPhone 14) e a versão do iOS.</li>
+            <li>A versão do app, mostrada na página da App Store.</li>
+            <li>O que você estava fazendo quando o problema aconteceu e em qual batalha estava.</li>
+            <li>Uma captura ou gravação de tela, se possível.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+
+        <details>
+            <summary>Como eu jogo?</summary>
+            <p>Você joga como o coelho em um tabuleiro, enfrentando inimigos feitos de balão. A cada turno você tem <strong>3 de mana</strong> e uma mão de cartas, e cada carta tem um custo de mana.</p>
+            <ul>
+                <li><strong>Toque em uma carta</strong> para selecioná-la. As casas onde ela pode ser usada se acendem no tabuleiro.</li>
+                <li><strong>Toque em uma casa destacada</strong> para jogar a carta ali. Toque fora do tabuleiro para cancelar e escolher outra carta.</li>
+                <li>Quando terminar, toque no botão verde de <strong>confirmação</strong> para encerrar o seu turno. Os inimigos então fazem a jogada deles e sua mana é recarregada.</li>
+                <li>Derrote todos os inimigos para vencer a batalha. Se sua vida chegar a zero, a jornada termina.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>O que fazem os diferentes tipos de cartas?</summary>
+            <ul>
+                <li>Cartas de <strong>Ataque</strong> causam dano aos inimigos que estão nas casas destacadas ao seu redor.</li>
+                <li>Cartas de <strong>Movimento</strong> movem o coelho para uma casa destacada.</li>
+                <li>Cartas de <strong>Defesa</strong> concedem um escudo que absorve dano.</li>
+                <li>Cartas de <strong>Efeito</strong> possuem efeitos especiais descritos na própria carta.</li>
+            </ul>
+            <p>O padrão de casas que uma carta alcança faz parte do seu design, então <em>onde</em> você está importa tanto quanto <em>o que</em> você joga.</p>
+        </details>
+
+        <details>
+            <summary>Quantas cartas eu tenho?</summary>
+            <p>Você começa cada batalha com 4 cartas na mão. Sempre que joga uma carta, você compra uma nova. Se nenhuma das cartas na sua mão puder ser jogada com a mana restante, seu turno passa automaticamente.</p>
+        </details>
+
+        <details>
+            <summary>Como funciona uma jornada (run)?</summary>
+            <p>Uma jornada é uma sequência de batalhas. A vida que sobrar ao final de uma batalha continua para a próxima, então proteja-a. Vença todas as batalhas para completar a jornada. Se você for derrotado, pode começar novamente desde o início.</p>
+        </details>
+
+        <details>
+            <summary>Como eu pauso, continuo ou reinicio?</summary>
+            <p>Toque no botão de pausa durante uma batalha. No menu de pausa você pode <strong>Continuar</strong> sua batalha ou <strong>Reiniciar</strong> a jornada para recomeçar desde a primeira batalha.</p>
+        </details>
+
+        <details>
+            <summary>O jogo precisa de conexão com a internet?</summary>
+            <p>Não. Trick or Sprint funciona totalmente offline.</p>
+        </details>
+
+        <details>
+            <summary>Meu progresso é salvo se eu fechar o app?</summary>
+            <p>O progresso da batalha atual é mantido apenas enquanto o app está aberto. Se você fechar o app no meio de uma jornada, começará uma nova jornada na próxima vez que abri-lo.</p>
+        </details>
+
+        <details>
+            <summary>O jogo está lento, travando ou fechando sozinho. O que posso fazer?</summary>
+            <ul>
+                <li>Feche o app completamente (deslize-o para cima no seletor de apps) e abra-o novamente.</li>
+                <li>Reinicie seu dispositivo e certifique-se de que não há outros apps pesados rodando em segundo plano.</li>
+                <li>Verifique se você tem a versão mais recente de Trick or Sprint e a última atualização do iOS disponível para o seu dispositivo.</li>
+                <li>Certifique-se de que seu dispositivo possui espaço livre de armazenamento.</li>
+            </ul>
+            <p>Se o problema continuar acontecendo, envie para nós os detalhes descritos acima e vamos investigar.</p>
+        </details>
+
+        <details>
+            <summary>Não estou sentindo as vibrações</summary>
+            <p>O jogo utiliza o retorno tátil do seu dispositivo. Verifique se a opção <em>Tato do Sistema</em> está ativada em <em>Ajustes &rarr; Som e Tato</em>, e lembre-se de que alguns dispositivos, incluindo alguns iPads, não possuem motor de vibração.</p>
+        </details>
+
+        <details>
+            <summary>O jogo coleta meus dados?</summary>
+            <p>Não. Trick or Sprint não possui contas próprias, anúncios ou ferramentas de rastreamento. Você pode ler todos os detalhes na nossa <a href="privacy.html">Política de Privacidade</a>.</p>
+        </details>
+
+        <details>
+            <summary>Quais dispositivos são compatíveis?</summary>
+            <p>Trick or Sprint roda em iPhone e iPad com iOS 15.0 ou superior.</p>
+        </details>
+
+    </div>
 </main>
 
 <footer class="site-footer">
-    <a href="index.html">Home</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <p>&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <a href="index.html"><span data-lang="en">Home</span><span data-lang="pt">Início</span></a>
+    <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+    <a href="privacy.html"><span data-lang="en">Privacy Policy</span><span data-lang="pt">Política de Privacidade</span></a>
+    <p data-lang="en">&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <p data-lang="pt">&copy; 2026 Unranked Studio. Todos os direitos reservados.</p>
 </footer>
+
+<script>
+    document.querySelectorAll('[data-set-lang]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = btn.getAttribute('data-set-lang');
+            document.documentElement.lang = lang;
+            var title = document.documentElement.getAttribute('data-title-' + lang);
+            if (title) document.title = title;
+            try { localStorage.setItem('unranked_lang', lang); } catch (e) {}
+        });
+    });
+</script>
 
 </body>
 </html>

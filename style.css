@@ -57,6 +57,11 @@ a:hover { color: var(--navy); }
     font-size: 1.35em;
     text-decoration: none;
 }
+.topbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .topbar nav a {
     color: white;
     text-decoration: none;
@@ -68,6 +73,48 @@ a:hover { color: var(--navy); }
 }
 .topbar nav a:hover,
 .topbar nav a[aria-current="page"] { border-bottom-color: var(--gold); }
+
+/* ---------- Language Switcher ---------- */
+html[lang="en"] [data-lang="pt"],
+html:not([lang="pt"]) [data-lang="pt"] {
+    display: none !important;
+}
+html[lang="pt"] [data-lang="en"] {
+    display: none !important;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+    background-color: var(--navy-dark);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 2px;
+}
+.lang-btn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.78em;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+.lang-btn:hover {
+    color: white;
+}
+html[lang="en"] .lang-btn[data-set-lang="en"],
+html:not([lang="pt"]) .lang-btn[data-set-lang="en"],
+html[lang="pt"] .lang-btn[data-set-lang="pt"] {
+    background-color: var(--gold);
+    color: var(--navy-dark);
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -255,5 +302,6 @@ details p, details ul { margin: 0 0 10px; }
     .story img { max-width: 180px; margin: 0 auto; }
     .story h2 { text-align: center; }
     .topbar nav a { margin-left: 14px; }
+    .lang-switch { margin-left: 14px; }
     .btn { width: 100%; }
 }

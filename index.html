@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Trick or Sprint - Unranked Studio" data-title-pt="Trick or Sprint - Unranked Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trick or Sprint - Unranked Studio</title>
     <meta name="description" content="Trick or Sprint is a positional card game by Unranked Studio. A rabbit escapes the magician's top hat and sets out to prove themselves as a magician of their own.">
+
+    <script>
+        (function() {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var urlLang = params.get('lang');
+                var saved = urlLang || localStorage.getItem('unranked_lang');
+                var lang = (saved === 'pt' || saved === 'en') ? saved : 'en';
+                if (urlLang === 'pt' || urlLang === 'en') {
+                    localStorage.setItem('unranked_lang', lang);
+                }
+                document.documentElement.lang = lang;
+                var title = document.documentElement.getAttribute('data-title-' + lang);
+                if (title) document.title = title;
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +34,14 @@
     <div class="container">
         <a href="index.html" class="brand">Unranked Studio</a>
         <nav>
-            <a href="#game">The Game</a>
-            <a href="#team">Team</a>
-            <a href="support.html">Support</a>
-            <a href="privacy.html">Privacy</a>
+            <a href="#game"><span data-lang="en">The Game</span><span data-lang="pt">O Jogo</span></a>
+            <a href="#team"><span data-lang="en">Team</span><span data-lang="pt">Equipe</span></a>
+            <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+            <a href="privacy.html"><span data-lang="en">Privacy</span><span data-lang="pt">Privacidade</span></a>
+            <div class="lang-switch" role="group" aria-label="Language / Idioma">
+                <button type="button" class="lang-btn" data-set-lang="en" title="English">EN</button>
+                <button type="button" class="lang-btn" data-set-lang="pt" title="Português">PT</button>
+            </div>
         </nav>
     </div>
 </header>
@@ -31,19 +52,35 @@
         <div class="hero-art">
             <img src="images/app-icon.png" alt="Trick or Sprint app icon: a rabbit in a magician's cape holding a wand" class="app-icon">
         </div>
-        <p class="studio-tag">An Unranked Studio game</p>
+        <p class="studio-tag">
+            <span data-lang="en">An Unranked Studio game</span>
+            <span data-lang="pt">Um jogo da Unranked Studio</span>
+        </p>
         <h1>Trick or Sprint</h1>
-        <p class="tagline">Every great magician starts as a rabbit.</p>
-        <p class="pitch">
+        <p class="tagline">
+            <span data-lang="en">Every great magician starts as a rabbit.</span>
+            <span data-lang="pt">Todo grande mágico começa como um coelho.</span>
+        </p>
+        <p class="pitch" data-lang="en">
             A positional card game where <em>where you stand</em> matters as much as <em>what you play</em>.
             Hop across the grid, line up your cards and outsmart a circus of balloon animals.
+        </p>
+        <p class="pitch" data-lang="pt">
+            Um jogo de cartas posicional em que <em>onde você está</em> importa tanto quanto <em>o que você joga</em>.
+            Pule pelo tabuleiro, alinhe suas cartas e supere um circo de animais de balão.
         </p>
 
         <div class="cta-row">
             <!-- When the app is live, replace this span with:
                  <a href="https://apps.apple.com/app/YOUR-APP-ID" class="btn btn-primary">Download on the App Store</a> -->
-            <span class="btn btn-soon">Coming soon to the App Store</span>
-            <a href="support.html" class="btn btn-teal">Get support</a>
+            <span class="btn btn-soon">
+                <span data-lang="en">Coming soon to the App Store</span>
+                <span data-lang="pt">Em breve na App Store</span>
+            </span>
+            <a href="support.html" class="btn btn-teal">
+                <span data-lang="en">Get support</span>
+                <span data-lang="pt">Obter suporte</span>
+            </a>
         </div>
     </div>
 </section>
@@ -51,33 +88,57 @@
 <!-- ============ THE GAME ============ -->
 <section class="block" id="game">
     <div class="container">
-        <h2>The Game</h2>
-        <p class="lead">
+        <h2>
+            <span data-lang="en">The Game</span>
+            <span data-lang="pt">O Jogo</span>
+        </h2>
+        <p class="lead" data-lang="en">
             Trick or Sprint is a turn-based, positional card game for iPhone and iPad.
             Every card is a pattern on the grid, so the best move is rarely the strongest card,
             it's the one you can actually reach.
+        </p>
+        <p class="lead" data-lang="pt">
+            Trick or Sprint é um jogo de cartas posicional por turnos para iPhone e iPad.
+            Cada carta é um padrão no tabuleiro, então a melhor jogada raramente é a carta mais forte,
+            e sim aquela que você realmente consegue alcançar.
         </p>
 
         <div class="feature-grid">
             <div class="feature">
                 <span class="num">1</span>
-                <h3>Position is power</h3>
-                <p>Cards hit or move you across specific tiles around the rabbit. Step into the right spot first, then strike.</p>
+                <h3>
+                    <span data-lang="en">Position is power</span>
+                    <span data-lang="pt">Posição é poder</span>
+                </h3>
+                <p data-lang="en">Cards hit or move you across specific tiles around the rabbit. Step into the right spot first, then strike.</p>
+                <p data-lang="pt">As cartas atingem ou movem você por casas específicas ao redor do coelho. Entre no lugar certo primeiro e depois ataque.</p>
             </div>
             <div class="feature">
                 <span class="num">2</span>
-                <h3>Spend your mana</h3>
-                <p>Three mana each turn and a hand of four cards. Choose between attacking, moving and shielding.</p>
+                <h3>
+                    <span data-lang="en">Spend your mana</span>
+                    <span data-lang="pt">Gaste sua mana</span>
+                </h3>
+                <p data-lang="en">Three mana each turn and a hand of four cards. Choose between attacking, moving and shielding.</p>
+                <p data-lang="pt">Três de mana a cada turno e uma mão de quatro cartas. Escolha entre atacar, mover e se defender.</p>
             </div>
             <div class="feature">
                 <span class="num">3</span>
-                <h3>Fight the balloons</h3>
-                <p>Balloon dogs, turtles and fish want to pop your act. Dodge, outflank and pop them first.</p>
+                <h3>
+                    <span data-lang="en">Fight the balloons</span>
+                    <span data-lang="pt">Enfrente os balões</span>
+                </h3>
+                <p data-lang="en">Balloon dogs, turtles and fish want to pop your act. Dodge, outflank and pop them first.</p>
+                <p data-lang="pt">Cachorros, tartarugas e peixes de balão querem estourar o seu show. Desvie, flanqueie e estoure-os primeiro.</p>
             </div>
             <div class="feature">
                 <span class="num">4</span>
-                <h3>Survive the run</h3>
-                <p>Your health carries over from battle to battle. Make every hop count.</p>
+                <h3>
+                    <span data-lang="en">Survive the run</span>
+                    <span data-lang="pt">Sobreviva à jornada</span>
+                </h3>
+                <p data-lang="en">Your health carries over from battle to battle. Make every hop count.</p>
+                <p data-lang="pt">Sua vida continua de uma batalha para a outra. Faça cada pulo valer a pena.</p>
             </div>
         </div>
     </div>
@@ -88,7 +149,7 @@
     <div class="container">
         <div class="panel story">
             <img src="images/rabbit.png" alt="The rabbit, wearing a tiny top hat and teal cape, holding a magic wand">
-            <div>
+            <div data-lang="en">
                 <h2>The Story</h2>
                 <p>
                     For years, a rabbit lived inside a magician's top hat, pulled out for the applause
@@ -102,6 +163,20 @@
                     Now every step is a sprint, every card is a spell, and the next act is theirs.
                 </p>
             </div>
+            <div data-lang="pt">
+                <h2>A História</h2>
+                <p>
+                    Durante anos, um coelho viveu dentro da cartola de um mágico, tirado apenas para os aplausos
+                    e guardado antes que alguém pudesse perguntar quem ele realmente era.
+                </p>
+                <p>
+                    Uma noite, o coelho fugiu. Ele pulou para fora da cartola, pegou sua própria cartolinha e varinha,
+                    e partiu para provar que é muito mais do que o truque de outra pessoa.
+                </p>
+                <p>
+                    Agora cada passo é uma corrida, cada carta é um feitiço, e o próximo ato é todo dele.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -109,8 +184,14 @@
 <!-- ============ THE TEAM ============ -->
 <section class="block" id="team">
     <div class="container">
-        <h2>Meet the Team</h2>
-        <p class="lead">Five people behind Unranked Studio and Trick or Sprint.</p>
+        <h2>
+            <span data-lang="en">Meet the Team</span>
+            <span data-lang="pt">Conheça a Equipe</span>
+        </h2>
+        <p class="lead">
+            <span data-lang="en">Five people behind Unranked Studio and Trick or Sprint.</span>
+            <span data-lang="pt">Cinco pessoas por trás da Unranked Studio e de Trick or Sprint.</span>
+        </p>
 
         <!-- Order alternates the name-label color baked into each photo: gold, teal, gold, teal, gold. -->
         <div class="team-grid">
@@ -127,10 +208,17 @@
 <section class="block" id="studio">
     <div class="container">
         <div class="panel" style="text-align:center;">
-            <h2 style="margin-top:0;">About Unranked Studio</h2>
-            <p style="max-width:680px; margin:0 auto 18px;">
+            <h2 style="margin-top:0;">
+                <span data-lang="en">About Unranked Studio</span>
+                <span data-lang="pt">Sobre a Unranked Studio</span>
+            </h2>
+            <p style="max-width:680px; margin:0 auto 18px;" data-lang="en">
                 Unranked Studio is a five-person indie team making games that are easy to pick up and hard to put down.
                 Questions, feedback or just want to say hi?
+            </p>
+            <p style="max-width:680px; margin:0 auto 18px;" data-lang="pt">
+                A Unranked Studio é uma equipe indie de cinco pessoas criando jogos fáceis de aprender e difíceis de largar.
+                Dúvidas, sugestões ou só quer dar um oi?
             </p>
             <a href="mailto:studio.unranked@gmail.com" class="btn btn-teal">studio.unranked@gmail.com</a>
         </div>
@@ -138,11 +226,24 @@
 </section>
 
 <footer class="site-footer">
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="mailto:studio.unranked@gmail.com">Contact</a>
-    <p>&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+    <a href="privacy.html"><span data-lang="en">Privacy Policy</span><span data-lang="pt">Política de Privacidade</span></a>
+    <a href="mailto:studio.unranked@gmail.com"><span data-lang="en">Contact</span><span data-lang="pt">Contato</span></a>
+    <p data-lang="en">&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <p data-lang="pt">&copy; 2026 Unranked Studio. Todos os direitos reservados.</p>
 </footer>
+
+<script>
+    document.querySelectorAll('[data-set-lang]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = btn.getAttribute('data-set-lang');
+            document.documentElement.lang = lang;
+            var title = document.documentElement.getAttribute('data-title-' + lang);
+            if (title) document.title = title;
+            try { localStorage.setItem('unranked_lang', lang); } catch (e) {}
+        });
+    });
+</script>
 
 </body>
 </html>
