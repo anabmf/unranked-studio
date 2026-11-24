@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-title-en="Support - Trick or Sprint" data-title-pt="Suporte - Trick or Sprint">
+<html lang="en" data-title-en="Support - Tricky Tiles: Outside the Hat" data-title-pt="Suporte - Tricky Tiles: Outside the Hat">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Trick or Sprint</title>
-    <meta name="description" content="Get help with Trick or Sprint, a positional card game by Unranked Studio: how to play, troubleshooting and contact information.">
+    <title>Support - Tricky Tiles: Outside the Hat</title>
+    <meta name="description" content="Get help with Tricky Tiles: Outside the Hat, a tactical grid deckbuilder by Unranked Studio: how to play, troubleshooting and contact information.">
 
     <script>
         (function() {
@@ -35,6 +35,8 @@
         <a href="index.html" class="brand">Unranked Studio</a>
         <nav>
             <a href="index.html"><span data-lang="en">Home</span><span data-lang="pt">Início</span></a>
+            <a href="index.html#game"><span data-lang="en">The Game</span><span data-lang="pt">O Jogo</span></a>
+            <a href="index.html#team"><span data-lang="en">Team</span><span data-lang="pt">Equipe</span></a>
             <a href="support.html" aria-current="page"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
             <a href="privacy.html"><span data-lang="en">Privacy</span><span data-lang="pt">Privacidade</span></a>
             <div class="lang-switch" role="group" aria-label="Language / Idioma">
@@ -48,12 +50,12 @@
 <main class="doc">
     <div class="container narrow" data-lang="en">
 
-        <h1>Trick or Sprint Support</h1>
-        <p>Stuck on a battle, found a bug, or have an idea for the game? We're happy to help. Write to us and we'll get back to you as soon as we can.</p>
+        <h1>Tricky Tiles: Outside the Hat Support</h1>
+        <p>Stuck on a wave, found a bug, or have an idea for the game? We're happy to help. Write to us and we'll get back to you as soon as we can.</p>
 
         <div class="contact-card">
             <p>Questions, bug reports and feedback:</p>
-            <a href="mailto:studio.unranked@gmail.com?subject=Trick%20or%20Sprint%20Support" class="btn btn-primary">Contact Support</a>
+            <a href="mailto:studio.unranked@gmail.com?subject=Tricky%20Tiles%3A%20Outside%20the%20Hat%20Support" class="btn btn-primary">Contact Support</a>
             <p class="small">studio.unranked@gmail.com</p>
         </div>
 
@@ -62,7 +64,7 @@
         <ul>
             <li>Your device model (for example, iPhone 14) and iOS version.</li>
             <li>The app version, shown on the App Store page.</li>
-            <li>What you were doing when the problem happened, and which battle you were on.</li>
+            <li>What you were doing when the problem happened, and which wave you were on.</li>
             <li>A screenshot or screen recording, if you can.</li>
         </ul>
 
@@ -70,49 +72,56 @@
 
         <details>
             <summary>How do I play?</summary>
-            <p>You play as the rabbit on a grid, facing balloon-animal enemies. Each turn you have <strong>3 mana</strong> and a hand of cards, and every card has a mana cost.</p>
+            <p>You control the rabbit on a <strong>5&times;6 theater stage grid</strong>, facing endless waves of magical creations. Each turn starts with your Max Mana (<strong>3 by default</strong>) and a hand of <strong>4 cards</strong>.</p>
             <ul>
-                <li><strong>Tap a card</strong> to select it. The tiles where it can be used light up on the grid.</li>
-                <li><strong>Tap a highlighted tile</strong> to play the card there. Tap outside the grid to cancel and pick another card.</li>
-                <li>When you're done, tap the green <strong>check-mark</strong> button to end your turn. The enemies then take their turn and your mana is refilled.</li>
-                <li>Defeat every enemy to win the battle. If your health reaches zero, the run is over.</li>
+                <li><strong>Select or drag a card</strong> to highlight valid tiles on the grid, color-coded by card type, with a <strong>real-time preview</strong> of the damage you'll deal or the shield you'll receive.</li>
+                <li><strong>Play the card</strong> on a highlighted tile: mana is spent, a replacement card is drawn immediately, and the card's effect triggers right away.</li>
+                <li><strong>Tap any enemy</strong> on the grid to inspect their deck and see their attack patterns and damage.</li>
+                <li>When you're done, end your turn. The enemies will then execute their cards, and your mana refills for the next turn.</li>
+                <li>Defeat every enemy on stage to clear the wave. If your health reaches zero, the run is over.</li>
             </ul>
         </details>
 
         <details>
-            <summary>What do the different cards do?</summary>
+            <summary>What do the different cards and balloon enemies do?</summary>
             <ul>
-                <li><strong>Attack</strong> cards damage enemies standing on the highlighted tiles around you.</li>
-                <li><strong>Movement</strong> cards move the rabbit to a highlighted tile.</li>
-                <li><strong>Defend</strong> cards give you a shield that absorbs damage.</li>
-                <li><strong>Effect</strong> cards have special effects described on the card.</li>
+                <li><strong>Movement (Cyan):</strong> Repositions the rabbit to a valid tile to dodge attacks or flank enemies.</li>
+                <li><strong>Attack (Red):</strong> Deals direct damage to specific tiles or areas relative to the rabbit. Attacking empty tiles shows a <em>"Miss"</em> indicator.</li>
+                <li><strong>Defend (Dark Blue):</strong> Grants <strong>Shield</strong> points that absorb incoming enemy damage until the end of the enemies' turn.</li>
+                <li><strong>Effect (Gold):</strong> Special cards that heal, draw extra cards, alter mana or modify deck attributes.</li>
             </ul>
-            <p>The pattern of tiles a card can reach is part of its design, so <em>where</em> you stand matters as much as <em>what</em> you play.</p>
+            <p><strong>Balloon Chain Reactions:</strong> Balloon-type enemies pop when defeated, dealing area damage to all <strong>8 adjacent tiles</strong> around them. Position carefully to trigger explosive chain reactions across the grid!</p>
         </details>
 
         <details>
-            <summary>How many cards do I have?</summary>
-            <p>You start each battle with 4 cards in hand. Every time you play a card, you draw a new one. If none of the cards in your hand can be played with your remaining mana, your turn passes automatically.</p>
+            <summary>How do my hand and deck work?</summary>
+            <p>You hold up to 4 cards in hand. Every time you play a card, a new one is drawn immediately from your draw pile so combat stays fast and responsive. When your draw pile runs out, your discard pile is reshuffled automatically.</p>
         </details>
 
         <details>
-            <summary>How does a run work?</summary>
-            <p>A run is a series of battles. The health you have left at the end of one battle carries over into the next one, so protect it. Win every battle to beat the run. If you are defeated, you can start the run again from the beginning.</p>
+            <summary>How do Endless Waves and Arena Offers work?</summary>
+            <p>In Endless Mode, you face procedurally generated waves of increasing difficulty. Between waves in the same run, you <strong>keep your current health, max health, max mana and all accumulated deck upgrades</strong>—there is no free automatic heal between fights, so every hit point counts.</p>
+            <p>After clearing a wave, you choose <strong>1 of 3 Arena Offer scrolls</strong> (<em>Common</em>, <em>Rare</em> or <em>Epic</em>) before the next battle:</p>
+            <ul>
+                <li>Early waves grant beneficial or special offer sets, while deeper waves can present cursed trade-offs where you weigh high risk against power.</li>
+                <li>Offers can permanently modify the mana cost, damage or shield of cards in your deck, change hero or enemy stats, or trigger reactive effects during combat (such as at battle start/end, on playing a card, spending mana, moving, gaining shield or defeating an enemy).</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>How do Apple Game Center leaderboards and achievements work?</summary>
+            <p>Tricky Tiles: Outside the Hat integrates with <strong>Apple Game Center</strong> to track your highest wave reached in Endless Mode on the global leaderboard and unlock achievements (such as surviving waves 2, 6 and 10, winning a battle with 1 HP left, or dealing over 25 damage in a single attack).</p>
+            <p>Your best wave and achievements are saved locally on your device first and automatically synced to Game Center whenever you are online.</p>
         </details>
 
         <details>
             <summary>How do I pause, resume or restart?</summary>
-            <p>Tap the pause button during a battle. From the pause menu you can <strong>Resume</strong> your battle or <strong>Reset</strong> the run to start over from the first battle.</p>
+            <p>Tap the pause button during a battle. From the pause menu you can <strong>Resume</strong> your battle or <strong>Reset</strong> the run to start over from the first wave.</p>
         </details>
 
         <details>
             <summary>Does the game need an internet connection?</summary>
-            <p>No. Trick or Sprint works fully offline.</p>
-        </details>
-
-        <details>
-            <summary>Is my progress saved if I close the app?</summary>
-            <p>Your progress is kept only while the app is open. If you close the app in the middle of a run, you will start a new run the next time you open it.</p>
+            <p>No. Tricky Tiles: Outside the Hat works fully offline. If you earn a new high score or achievement while offline, it is stored on your device and synced to Apple Game Center automatically the next time you connect.</p>
         </details>
 
         <details>
@@ -120,7 +129,7 @@
             <ul>
                 <li>Close the app completely (swipe it away from the app switcher) and open it again.</li>
                 <li>Restart your device and make sure no other heavy apps are running in the background.</li>
-                <li>Check that you have the latest version of Trick or Sprint and the latest iOS update available for your device.</li>
+                <li>Check that you have the latest version of Tricky Tiles: Outside the Hat and the latest iOS update available for your device.</li>
                 <li>Make sure your device has some free storage space.</li>
             </ul>
             <p>If it keeps happening, send us the details described above and we'll look into it.</p>
@@ -128,29 +137,29 @@
 
         <details>
             <summary>I don't feel the vibrations</summary>
-            <p>The game uses your device's haptic feedback. Check that <em>System Haptics</em> is turned on in <em>Settings &rarr; Sounds &amp; Haptics</em>, and note that some devices, including some iPads, don't have a haptic engine.</p>
+            <p>The game uses native iOS haptics for card selection, attacks, shields and balloon pops. Check that <em>System Haptics</em> is turned on in <em>Settings &rarr; Sounds &amp; Haptics</em>, and note that some devices, including some iPads, don't have a haptic engine.</p>
         </details>
 
         <details>
             <summary>Does the game collect my data?</summary>
-            <p>No. Trick or Sprint has no accounts, ads or analytics. You can read the details in our <a href="privacy.html">Privacy Policy</a>.</p>
+            <p>We do not collect or store any personal data on our own servers. The app has no Unranked Studio accounts, no ads, no in-app purchases and no third-party analytics—only optional Apple Game Center integration for leaderboards and achievements. Read the full details in our <a href="privacy.html">Privacy Policy</a>.</p>
         </details>
 
         <details>
             <summary>Which devices are supported?</summary>
-            <p>Trick or Sprint runs on iPhone and iPad with iOS 15.0 or later.</p>
+            <p>Tricky Tiles: Outside the Hat runs on iPhone and iPad with iOS 15.0 or later.</p>
         </details>
 
     </div>
 
     <div class="container narrow" data-lang="pt">
 
-        <h1>Suporte - Trick or Sprint</h1>
-        <p>Travou em uma batalha, encontrou um bug ou tem uma ideia para o jogo? Ficaremos felizes em ajudar. Escreva para nós e responderemos o mais rápido possível.</p>
+        <h1>Suporte - Tricky Tiles: Outside the Hat</h1>
+        <p>Travou em uma onda, encontrou um bug ou tem uma ideia para o jogo? Ficaremos felizes em ajudar. Escreva para nós e responderemos o mais rápido possível.</p>
 
         <div class="contact-card">
             <p>Dúvidas, relatos de bugs e sugestões:</p>
-            <a href="mailto:studio.unranked@gmail.com?subject=Suporte%20Trick%20or%20Sprint" class="btn btn-primary">Falar com o Suporte</a>
+            <a href="mailto:studio.unranked@gmail.com?subject=Suporte%20Tricky%20Tiles%3A%20Outside%20the%20Hat" class="btn btn-primary">Falar com o Suporte</a>
             <p class="small">studio.unranked@gmail.com</p>
         </div>
 
@@ -159,7 +168,7 @@
         <ul>
             <li>O modelo do seu dispositivo (por exemplo, iPhone 14) e a versão do iOS.</li>
             <li>A versão do app, mostrada na página da App Store.</li>
-            <li>O que você estava fazendo quando o problema aconteceu e em qual batalha estava.</li>
+            <li>O que você estava fazendo quando o problema aconteceu e em qual onda (wave) estava.</li>
             <li>Uma captura ou gravação de tela, se possível.</li>
         </ul>
 
@@ -167,49 +176,56 @@
 
         <details>
             <summary>Como eu jogo?</summary>
-            <p>Você joga como o coelho em um tabuleiro, enfrentando inimigos feitos de balão. A cada turno você tem <strong>3 de mana</strong> e uma mão de cartas, e cada carta tem um custo de mana.</p>
+            <p>Você controla o coelho em um <strong>palco com grid 5&times;6</strong>, enfrentando ondas infinitas de criações mágicas. Cada turno começa com sua Mana Máxima (<strong>3 por padrão</strong>) e uma mão de <strong>4 cartas</strong>.</p>
             <ul>
-                <li><strong>Toque em uma carta</strong> para selecioná-la. As casas onde ela pode ser usada se acendem no tabuleiro.</li>
-                <li><strong>Toque em uma casa destacada</strong> para jogar a carta ali. Toque fora do tabuleiro para cancelar e escolher outra carta.</li>
-                <li>Quando terminar, toque no botão verde de <strong>confirmação</strong> para encerrar o seu turno. Os inimigos então fazem a jogada deles e sua mana é recarregada.</li>
-                <li>Derrote todos os inimigos para vencer a batalha. Se sua vida chegar a zero, a jornada termina.</li>
+                <li><strong>Selecione ou arraste uma carta</strong> para destacar as casas válidas no tabuleiro com cores correspondentes ao tipo da carta e ver uma <strong>pré-visualização em tempo real</strong> do dano que será causado ou do escudo que você receberá.</li>
+                <li><strong>Jogue a carta</strong> em uma casa destacada: a mana é consumida, uma nova carta é comprada imediatamente do baralho e o efeito é aplicado na mesma hora.</li>
+                <li><strong>Toque em qualquer inimigo</strong> no tabuleiro para inspecionar o deck dele e entender seus padrões de alcance e dano.</li>
+                <li>Quando terminar suas jogadas, encerre o turno. Os inimigos executarão as cartas deles e sua mana será recarregada para o próximo turno.</li>
+                <li>Derrote todos os inimigos do palco para vencer a onda. Se sua vida chegar a zero, a partida termina.</li>
             </ul>
         </details>
 
         <details>
-            <summary>O que fazem os diferentes tipos de cartas?</summary>
+            <summary>O que fazem os diferentes tipos de cartas e os inimigos de balão?</summary>
             <ul>
-                <li>Cartas de <strong>Ataque</strong> causam dano aos inimigos que estão nas casas destacadas ao seu redor.</li>
-                <li>Cartas de <strong>Movimento</strong> movem o coelho para uma casa destacada.</li>
-                <li>Cartas de <strong>Defesa</strong> concedem um escudo que absorve dano.</li>
-                <li>Cartas de <strong>Efeito</strong> possuem efeitos especiais descritos na própria carta.</li>
+                <li><strong>Movimento (Ciano):</strong> Reposiciona o coelho em uma casa válida do grid para esquivar de ataques ou flanquear inimigos.</li>
+                <li><strong>Ataque (Vermelho):</strong> Aplica dano direto em áreas ou posições específicas do grid relativas ao coelho. Atacar sem atingir alvos exibe o aviso <em>"Miss"</em>.</li>
+                <li><strong>Defesa (Azul Escuro):</strong> Concede pontos de <strong>Escudo</strong> que absorvem o dano inimigo até o final do turno dos oponentes.</li>
+                <li><strong>Efeito (Dourado):</strong> Cartas especiais que curam, compram cartas extras, alteram a mana ou modificam atributos do baralho.</li>
             </ul>
-            <p>O padrão de casas que uma carta alcança faz parte do seu design, então <em>onde</em> você está importa tanto quanto <em>o que</em> você joga.</p>
+            <p><strong>Reação em Cadeia (Balões):</strong> Inimigos do tipo Balão estouram ao morrer, causando dano em área nos <strong>8 tiles adjacentes</strong> ao redor deles — permitindo criar reações em cadeia explosivas no tabuleiro!</p>
         </details>
 
         <details>
-            <summary>Quantas cartas eu tenho?</summary>
-            <p>Você começa cada batalha com 4 cartas na mão. Sempre que joga uma carta, você compra uma nova. Se nenhuma das cartas na sua mão puder ser jogada com a mana restante, seu turno passa automaticamente.</p>
+            <summary>Como funcionam minha mão e meu baralho?</summary>
+            <p>Você mantém até 4 cartas na mão. Sempre que uma carta é jogada, uma nova carta é comprada imediatamente da pilha de compra, mantendo o ritmo rápido e responsivo. Quando a pilha de compra acaba, a pilha de descarte é reembaralhada automaticamente.</p>
         </details>
 
         <details>
-            <summary>Como funciona uma jornada (run)?</summary>
-            <p>Uma jornada é uma sequência de batalhas. A vida que sobrar ao final de uma batalha continua para a próxima, então proteja-a. Vença todas as batalhas para completar a jornada. Se você for derrotado, pode começar novamente desde o início.</p>
+            <summary>Como funcionam as Ondas Infinitas e as Ofertas de Arena?</summary>
+            <p>No Modo Infinito, você enfrenta ondas geradas proceduralmente com dificuldade crescente. Entre uma batalha e outra dentro da mesma partida, o coelho <strong>mantém sua vida atual, vida máxima, mana máxima e todas as modificações acumuladas no deck</strong> — não há cura automática gratuita entre as lutas, tornando cada ponto de vida valioso.</p>
+            <p>Ao vencer cada onda, você escolhe <strong>1 entre 3 pergaminhos de Ofertas de Arena</strong> (<em>Comum</em>, <em>Rara</em> ou <em>Épica</em>) antes do próximo combate:</p>
+            <ul>
+                <li>As primeiras ondas garantem conjuntos benéficos ou especiais, enquanto ondas mais avançadas podem trazer ofertas amaldiçoadas (<em>trade-offs</em>), exigindo escolher o menor dos males ou aceitar alto risco em troca de poder.</li>
+                <li>As ofertas podem alterar permanentemente o custo de mana, dano ou escudo de cartas do seu deck, modificar atributos do herói ou dos inimigos, ou disparar efeitos reativos durante a luta (no início/fim do combate, ao jogar carta, gastar mana, mover-se, ganhar escudo ou eliminar um inimigo).</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Como funcionam o placar e as conquistas do Apple Game Center?</summary>
+            <p>Tricky Tiles: Outside the Hat integra-se nativamente ao <strong>Apple Game Center</strong> para registrar a maior onda alcançada no Modo Infinito no placar de líderes global (leaderboard) e desbloquear conquistas (como sobreviver às ondas 2, 6 e 10, vencer uma batalha com exatamente 1 de HP restante ou causar mais de 25 de dano em um único ataque).</p>
+            <p>Seus recordes e conquistas são salvos primeiro localmente no dispositivo e sincronizados automaticamente com o Game Center assim que você estiver online.</p>
         </details>
 
         <details>
             <summary>Como eu pauso, continuo ou reinicio?</summary>
-            <p>Toque no botão de pausa durante uma batalha. No menu de pausa você pode <strong>Continuar</strong> sua batalha ou <strong>Reiniciar</strong> a jornada para recomeçar desde a primeira batalha.</p>
+            <p>Toque no botão de pausa durante uma batalha. No menu de pausa você pode <strong>Continuar</strong> sua batalha ou <strong>Reiniciar</strong> a partida para recomeçar desde a primeira onda.</p>
         </details>
 
         <details>
             <summary>O jogo precisa de conexão com a internet?</summary>
-            <p>Não. Trick or Sprint funciona totalmente offline.</p>
-        </details>
-
-        <details>
-            <summary>Meu progresso é salvo se eu fechar o app?</summary>
-            <p>O progresso da batalha atual é mantido apenas enquanto o app está aberto. Se você fechar o app no meio de uma jornada, começará uma nova jornada na próxima vez que abri-lo.</p>
+            <p>Não. Tricky Tiles: Outside the Hat funciona totalmente offline. Caso você alcance um novo recorde de onda ou desbloqueie uma conquista enquanto estiver offline, o progresso fica salvo no aparelho e é enviado ao Apple Game Center automaticamente assim que a conexão for estabelecida.</p>
         </details>
 
         <details>
@@ -217,7 +233,7 @@
             <ul>
                 <li>Feche o app completamente (deslize-o para cima no seletor de apps) e abra-o novamente.</li>
                 <li>Reinicie seu dispositivo e certifique-se de que não há outros apps pesados rodando em segundo plano.</li>
-                <li>Verifique se você tem a versão mais recente de Trick or Sprint e a última atualização do iOS disponível para o seu dispositivo.</li>
+                <li>Verifique se você tem a versão mais recente de Tricky Tiles: Outside the Hat e a última atualização do iOS disponível para o seu dispositivo.</li>
                 <li>Certifique-se de que seu dispositivo possui espaço livre de armazenamento.</li>
             </ul>
             <p>Se o problema continuar acontecendo, envie para nós os detalhes descritos acima e vamos investigar.</p>
@@ -225,17 +241,17 @@
 
         <details>
             <summary>Não estou sentindo as vibrações</summary>
-            <p>O jogo utiliza o retorno tátil do seu dispositivo. Verifique se a opção <em>Tato do Sistema</em> está ativada em <em>Ajustes &rarr; Som e Tato</em>, e lembre-se de que alguns dispositivos, incluindo alguns iPads, não possuem motor de vibração.</p>
+            <p>O jogo utiliza o feedback tátil nativo do iOS para seleção de cartas, impactos de ataques, ativação de escudos e estouro de balões. Verifique se a opção <em>Tato do Sistema</em> está ativada em <em>Ajustes &rarr; Som e Tato</em>, e lembre-se de que alguns dispositivos, incluindo alguns iPads, não possuem motor de vibração.</p>
         </details>
 
         <details>
             <summary>O jogo coleta meus dados?</summary>
-            <p>Não. Trick or Sprint não possui contas próprias, anúncios ou ferramentas de rastreamento. Você pode ler todos os detalhes na nossa <a href="privacy.html">Política de Privacidade</a>.</p>
+            <p>Não coletamos nem armazenamos dados pessoais em servidores próprios. O app não exige conta na Unranked Studio, não contém anúncios, compras internas ou ferramentas de rastreamento de terceiros — apenas integração opcional com o Apple Game Center para placares de líderes e conquistas. Leia todos os detalhes na nossa <a href="privacy.html">Política de Privacidade</a>.</p>
         </details>
 
         <details>
             <summary>Quais dispositivos são compatíveis?</summary>
-            <p>Trick or Sprint roda em iPhone e iPad com iOS 15.0 ou superior.</p>
+            <p>Tricky Tiles: Outside the Hat roda em iPhone e iPad com iOS 15.0 ou superior.</p>
         </details>
 
     </div>

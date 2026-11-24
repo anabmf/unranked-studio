@@ -1,3 +1,3 @@
 ### Unranked Studio
 
-Creator of Trick or Sprint Game
+Creator of Tricky Tiles: Outside the Hat Game
