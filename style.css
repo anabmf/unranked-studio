@@ -116,6 +116,9 @@ html[lang="pt"] [data-lang="en"] {
     padding: 4px 10px;
     border-radius: 999px;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     transition: background-color 0.15s, color 0.15s;
 }
 .lang-btn:hover {
@@ -189,6 +192,52 @@ html[lang="pt"] .lang-btn[data-set-lang="pt"] {
 }
 .hero p.pitch { max-width: 680px; margin: 0 auto 28px; font-size: 1.08em; }
 .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.qr-wrap {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+}
+.qr-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px 12px 12px;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(43, 30, 74, 0.06);
+    text-align: left;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.qr-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 30, 74, 0.1);
+    color: var(--text);
+}
+.qr-card img {
+    width: 96px;
+    height: 96px;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+}
+.qr-card .qr-label {
+    font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+    color: var(--navy);
+    font-size: 1.1em;
+    line-height: 1.2;
+    margin: 0 0 4px;
+    display: block;
+}
+.qr-card .qr-sub {
+    font-size: 0.88em;
+    color: var(--muted);
+    line-height: 1.35;
+    display: block;
+}
 
 /* ---------- Sections ---------- */
 section.block { padding: 36px 0; scroll-margin-top: 64px; }
