@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Privacy Policy - Tricky Tiles: Outside the Hat" data-title-pt="Política de Privacidade - Tricky Tiles: Outside the Hat">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Trick or Sprint</title>
-    <meta name="description" content="Privacy Policy for Trick or Sprint, a positional card game by Unranked Studio. The app collects no personal data.">
+    <title>Privacy Policy - Tricky Tiles: Outside the Hat</title>
+    <meta name="description" content="Privacy Policy for Tricky Tiles: Outside the Hat, a positional card game by Unranked Studio. The app collects no personal data.">
+
+    <script>
+        (function() {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var urlLang = params.get('lang');
+                var saved = urlLang || localStorage.getItem('unranked_lang');
+                var lang = (saved === 'pt' || saved === 'en') ? saved : 'en';
+                if (urlLang === 'pt' || urlLang === 'en') {
+                    localStorage.setItem('unranked_lang', lang);
+                }
+                document.documentElement.lang = lang;
+                var title = document.documentElement.getAttribute('data-title-' + lang);
+                if (title) document.title = title;
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,61 +34,122 @@
     <div class="container">
         <a href="index.html" class="brand">Unranked Studio</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="support.html">Support</a>
-            <a href="privacy.html" aria-current="page">Privacy</a>
+            <a href="index.html"><span data-lang="en">Home</span><span data-lang="pt">Início</span></a>
+            <a href="index.html#game"><span data-lang="en">The Game</span><span data-lang="pt">O Jogo</span></a>
+            <a href="index.html#team"><span data-lang="en">Team</span><span data-lang="pt">Equipe</span></a>
+            <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+            <a href="privacy.html" aria-current="page"><span data-lang="en">Privacy</span><span data-lang="pt">Privacidade</span></a>
+            <div class="lang-switch" role="group" aria-label="Language / Idioma">
+                <button type="button" class="lang-btn" data-set-lang="en" title="English"><span aria-hidden="true">🇺🇸</span> EN</button>
+                <button type="button" class="lang-btn" data-set-lang="pt" title="Português"><span aria-hidden="true">🇧🇷</span> PT</button>
+            </div>
         </nav>
     </div>
 </header>
 
 <main class="doc">
-    <div class="container narrow">
+    <div class="container narrow" data-lang="en">
 
         <h1>Privacy Policy</h1>
-        <p class="updated"><strong>Last updated: October 2026</strong></p>
+        <p class="updated"><strong>Last updated: November 24, 2026</strong></p>
 
-        <p>This Privacy Policy applies to <strong>Trick or Sprint</strong> (the "app"), a positional card game for iPhone and iPad published by <strong>Unranked Studio</strong> ("we", "us"). The short version: <strong>we do not collect any data about you.</strong></p>
+        <p>This Privacy Policy applies to <strong>Tricky Tiles: Outside the Hat</strong> (the "app"), a positional card game for iPhone and iPad published by <strong>Unranked Studio</strong> ("we", "us"). The short version: <strong>we do not collect or store any personal data on our own servers.</strong></p>
 
         <h2>1. Information We Collect</h2>
-        <p>Trick or Sprint is a self-contained, offline game. We do not collect, store, share or sell any personal information. Specifically:</p>
+        <p>Tricky Tiles: Outside the Hat does not require an account with us, and we do not operate any servers that collect, store, share or sell your personal information. Specifically:</p>
         <ul>
-            <li><strong>No account needed.</strong> You never have to sign up, log in, or give us a name or email address to play.</li>
-            <li><strong>No personal data.</strong> We do not collect names, contact details, location, contacts, photos, device identifiers, advertising identifiers or any other information about you.</li>
+            <li><strong>No Unranked Studio account needed.</strong> You never have to sign up with us or give us a name or email address to play. (Optional leaderboard and achievement features use your device's Apple Game Center account—see Section 3.)</li>
+            <li><strong>No personal data collected by us.</strong> We do not collect names, contact details, location, contacts, photos, device identifiers, advertising identifiers or any other personal information about you.</li>
             <li><strong>No analytics or advertising.</strong> The app contains no ads and no third-party analytics, tracking or attribution tools.</li>
             <li><strong>No purchases.</strong> The app has no in-app purchases, so no payment information is ever handled by us.</li>
-            <li><strong>No device permissions.</strong> The app does not ask for access to your camera, microphone, photos, location, contacts or any other private data on your device.</li>
+            <li><strong>No device permissions.</strong> The app does not ask for access to your camera, microphone, photos, location, contacts or any other private files on your device.</li>
         </ul>
 
         <h2>2. How the App Works on Your Device</h2>
-        <p>All gameplay, including your cards, your position on the grid, your health and the enemies' moves, is calculated locally on your device. The app does not need an internet connection to run and does not send gameplay information to us or to anyone else.</p>
+        <p>All gameplay—including your cards, your position on the grid, your health, between-battle offers and the enemies' moves—is calculated locally on your device. The app also stores your best wave score and achievement progress locally on your device so your milestones are preserved between sessions.</p>
         <p>The app uses your device's haptic engine to give small vibrations when you play cards or tap buttons. This happens entirely on your device and no data is recorded or transmitted.</p>
 
-        <h2>3. Third-Party Services</h2>
-        <p>Trick or Sprint is built with the <strong>Unity</strong> game engine. We have not enabled Unity Analytics, Unity Ads, Unity In-App Purchasing or any other third-party service that collects data about players, and the app includes no third-party advertising or social SDKs.</p>
+        <h2>3. Apple Game Center &amp; Third-Party Services</h2>
+        <p>Tricky Tiles: Outside the Hat integrates with <strong>Apple Game Center</strong> for leaderboards and achievements. If you are signed into Game Center on your device, the app sends your highest wave score and achievement progress directly to Apple's Game Center service so they can be displayed on leaderboards and in your Game Center profile. This data is handled directly by Apple under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>; we do not receive or store your Apple ID, contact details or Game Center data on any external servers. You can sign out of or manage Game Center at any time in your device's <em>Settings &rarr; Game Center</em>.</p>
+        <p>Tricky Tiles: Outside the Hat is built with the <strong>Unity</strong> game engine. We have not enabled Unity Analytics, Unity Ads, Unity In-App Purchasing or any other third-party service that collects data about players, and the app includes no third-party advertising or social SDKs.</p>
         <p>If you have chosen to share iOS analytics with app developers in your device's <em>Settings &rarr; Privacy &amp; Security &rarr; Analytics &amp; Improvements</em>, Apple may give us anonymous, aggregated crash and usage statistics through App Store Connect. These reports cannot be used to identify you, and sharing them is controlled by you in your device settings.</p>
 
         <h2>4. Children's Privacy</h2>
-        <p>Because the app collects no personal information from anyone, it does not knowingly collect data from children. Parents and guardians can be confident that the app contains no ads, no external links to outside services, no chat and no user-generated content.</p>
+        <p>Because we do not collect personal information from anyone, we do not knowingly collect data from children. Parents and guardians can be confident that the app contains no ads, no in-app purchases, no chat and no user-generated content, and that Apple Game Center features can be restricted through iOS Screen Time and Content &amp; Privacy Restrictions.</p>
 
         <h2>5. Your Rights</h2>
-        <p>Since we hold no personal data about you, there is nothing for us to access, correct, export or delete. If you contact us by email (see below), we will only use your address to reply to you, and we will delete the conversation on request.</p>
+        <p>Since we hold no personal data about you on our own servers, there is nothing for us to access, correct, export or delete. Any Game Center scores or achievements are managed through your Apple account settings, and local save data on your device can be cleared by uninstalling the app. If you contact us by email (see below), we will only use your address to reply to you, and we will delete the conversation on request.</p>
 
         <h2>6. Changes to This Policy</h2>
-        <p>If we add new features that change how data is handled (for example, online features), we will update this policy and the "Last updated" date above before the new version of the app is released.</p>
+        <p>If we add new features that change how data is handled, we will update this policy and the "Last updated" date above before the new version of the app is released. Your continued use of the app after any changes to this Privacy Policy take effect will signify your acknowledgment of the updated policy.</p>
 
         <h2>7. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or about how Trick or Sprint works, please reach out to <strong>Unranked Studio</strong>:</p>
+        <p>If you have any questions about this Privacy Policy or about how Tricky Tiles: Outside the Hat works, please reach out to <strong>Unranked Studio</strong>:</p>
+        <p><a href="mailto:studio.unranked@gmail.com">studio.unranked@gmail.com</a></p>
+
+    </div>
+
+    <div class="container narrow" data-lang="pt">
+
+        <h1>Política de Privacidade</h1>
+        <p class="updated"><strong>Última atualização: 24 de Novembro de 2026</strong></p>
+
+        <p>Esta Política de Privacidade aplica-se a <strong>Tricky Tiles: Outside the Hat</strong> (o "app"), um jogo de cartas posicional para iPhone e iPad publicado pela <strong>Unranked Studio</strong> ("nós"). Em resumo: <strong>não coletamos nem armazenamos nenhum dado pessoal em servidores próprios.</strong></p>
+
+        <h2>1. Informações que Coletamos</h2>
+        <p>Tricky Tiles: Outside the Hat não exige a criação de uma conta conosco, e não operamos servidores que coletem, armazenem, compartilhem ou vendam suas informações pessoais. Especificamente:</p>
+        <ul>
+            <li><strong>Nenhuma conta da Unranked Studio é necessária.</strong> Você nunca precisa se cadastrar conosco nem informar nome ou endereço de e-mail para jogar. (Os recursos opcionais de placar de líderes e conquistas utilizam a conta do Apple Game Center do seu próprio dispositivo — veja a Seção 3.)</li>
+            <li><strong>Nenhum dado pessoal coletado por nós.</strong> Não coletamos nomes, dados de contato, localização, contatos, fotos, identificadores de dispositivo, identificadores de publicidade ou qualquer outra informação pessoal sobre você.</li>
+            <li><strong>Sem análises de rastreamento ou anúncios.</strong> O app não contém anúncios nem ferramentas de análise, rastreamento ou atribuição de terceiros.</li>
+            <li><strong>Sem compras.</strong> O app não possui compras dentro do aplicativo (in-app purchases), portanto nenhuma informação de pagamento é processada por nós.</li>
+            <li><strong>Sem permissões do dispositivo.</strong> O app não solicita acesso à sua câmera, microfone, fotos, localização, contatos ou outros arquivos privados do seu dispositivo.</li>
+        </ul>
+
+        <h2>2. Como o App Funciona no Seu Dispositivo</h2>
+        <p>Toda a jogabilidade — incluindo suas cartas, sua posição no tabuleiro, sua vida, ofertas entre batalhas e os movimentos dos inimigos — é calculada localmente no seu dispositivo. O app também armazena localmente no dispositivo sua melhor pontuação de rodada (wave) e o progresso de conquistas para preservar seus marcos entre as sessões.</p>
+        <p>O app utiliza o motor tátil (haptic engine) do seu dispositivo para emitir pequenas vibrações quando você joga cartas ou toca em botões. Isso ocorre inteiramente no seu aparelho e nenhum dado é gravado ou transmitido.</p>
+
+        <h2>3. Apple Game Center e Serviços de Terceiros</h2>
+        <p>Tricky Tiles: Outside the Hat integra-se ao <strong>Apple Game Center</strong> para placares de líderes (leaderboards) e conquistas. Se você estiver conectado ao Game Center no seu dispositivo, o app envia sua maior pontuação de rodada e o progresso de conquistas diretamente para o serviço Game Center da Apple para que possam ser exibidos nos placares e no seu perfil do Game Center. Esses dados são tratados diretamente pela Apple de acordo com a <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Política de Privacidade da Apple</a>; não recebemos nem armazenamos seu ID Apple, detalhes de contato ou dados do Game Center em servidores externos. Você pode sair ou gerenciar o Game Center a qualquer momento no seu dispositivo em <em>Ajustes &rarr; Game Center</em>.</p>
+        <p>Tricky Tiles: Outside the Hat foi desenvolvido com o motor de jogo <strong>Unity</strong>. Não ativamos Unity Analytics, Unity Ads, Unity In-App Purchasing ou qualquer outro serviço de terceiros que colete dados sobre jogadores, e o app não inclui SDKs sociais ou de publicidade de terceiros.</p>
+        <p>Se você optou por compartilhar análises do iOS com desenvolvedores de apps em <em>Ajustes &rarr; Privacidade e Segurança &rarr; Análise e Melhorias</em>, a Apple poderá nos fornecer estatísticas anônimas e agregadas de falhas (crashes) e uso por meio do App Store Connect. Esses relatórios não podem ser usados para identificar você, e o compartilhamento é controlado por você nos ajustes do seu dispositivo.</p>
+
+        <h2>4. Privacidade de Crianças</h2>
+        <p>Como não coletamos informações pessoais de ninguém, não coletamos intencionalmente dados de crianças. Pais e responsáveis podem ficar tranquilos sabendo que o app não contém anúncios, compras internas, chat ou conteúdo gerado por usuários, e que os recursos do Apple Game Center podem ser restringidos por meio do Tempo de Uso e das Restrições de Conteúdo e Privacidade do iOS.</p>
+
+        <h2>5. Seus Direitos</h2>
+        <p>Como não mantemos nenhum dado pessoal sobre você em servidores próprios, não há nada para acessarmos, corrigirmos, exportarmos ou excluirmos. Quaisquer pontuações ou conquistas do Game Center são gerenciadas nas configurações da sua conta Apple, e os dados salvos localmente no seu dispositivo podem ser apagados desinstalando o app. Se você entrar em contato conosco por e-mail (veja abaixo), usaremos seu endereço apenas para responder à sua mensagem e excluiremos a conversa mediante solicitação.</p>
+
+        <h2>6. Alterações nesta Política</h2>
+        <p>Se adicionarmos novos recursos que alterem a forma como os dados são tratados, atualizaremos esta política e a data de "Última atualização" acima antes do lançamento da nova versão do app. O uso continuado do app após a entrada em vigor de quaisquer alterações nesta Política de Privacidade significará o seu conhecimento da política atualizada.</p>
+
+        <h2>7. Fale Conosco</h2>
+        <p>Se você tiver alguma dúvida sobre esta Política de Privacidade ou sobre como Tricky Tiles: Outside the Hat funciona, entre em contato com a <strong>Unranked Studio</strong>:</p>
         <p><a href="mailto:studio.unranked@gmail.com">studio.unranked@gmail.com</a></p>
 
     </div>
 </main>
 
 <footer class="site-footer">
-    <a href="index.html">Home</a>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <p>&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <a href="index.html"><span data-lang="en">Home</span><span data-lang="pt">Início</span></a>
+    <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+    <a href="privacy.html"><span data-lang="en">Privacy Policy</span><span data-lang="pt">Política de Privacidade</span></a>
+    <p data-lang="en">&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <p data-lang="pt">&copy; 2026 Unranked Studio. Todos os direitos reservados.</p>
 </footer>
+
+<script>
+    document.querySelectorAll('[data-set-lang]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = btn.getAttribute('data-set-lang');
+            document.documentElement.lang = lang;
+            var title = document.documentElement.getAttribute('data-title-' + lang);
+            if (title) document.title = title;
+            try { localStorage.setItem('unranked_lang', lang); } catch (e) {}
+        });
+    });
+</script>
 
 </body>
 </html>

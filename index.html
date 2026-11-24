@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="Tricky Tiles: Outside the Hat - Unranked Studio" data-title-pt="Tricky Tiles: Outside the Hat - Unranked Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trick or Sprint - Unranked Studio</title>
-    <meta name="description" content="Trick or Sprint is a positional card game by Unranked Studio. A rabbit escapes the magician's top hat and sets out to prove themselves as a magician of their own.">
+    <title>Tricky Tiles: Outside the Hat - Unranked Studio</title>
+    <meta name="description" content="Tricky Tiles: Outside the Hat is a tactical grid deckbuilder by Unranked Studio. Escape the magician's top hat, take the stage and outsmart endless waves of magical creations.">
+
+    <script>
+        (function() {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var urlLang = params.get('lang');
+                var saved = urlLang || localStorage.getItem('unranked_lang');
+                var lang = (saved === 'pt' || saved === 'en') ? saved : 'en';
+                if (urlLang === 'pt' || urlLang === 'en') {
+                    localStorage.setItem('unranked_lang', lang);
+                }
+                document.documentElement.lang = lang;
+                var title = document.documentElement.getAttribute('data-title-' + lang);
+                if (title) document.title = title;
+            } catch (e) {}
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +34,15 @@
     <div class="container">
         <a href="index.html" class="brand">Unranked Studio</a>
         <nav>
-            <a href="#game">The Game</a>
-            <a href="#team">Team</a>
-            <a href="support.html">Support</a>
-            <a href="privacy.html">Privacy</a>
+            <a href="index.html" data-nav="home" aria-current="page"><span data-lang="en">Home</span><span data-lang="pt">Início</span></a>
+            <a href="#game" data-nav="game"><span data-lang="en">The Game</span><span data-lang="pt">O Jogo</span></a>
+            <a href="#team" data-nav="team"><span data-lang="en">Team</span><span data-lang="pt">Equipe</span></a>
+            <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+            <a href="privacy.html"><span data-lang="en">Privacy</span><span data-lang="pt">Privacidade</span></a>
+            <div class="lang-switch" role="group" aria-label="Language / Idioma">
+                <button type="button" class="lang-btn" data-set-lang="en" title="English"><span aria-hidden="true">🇺🇸</span> EN</button>
+                <button type="button" class="lang-btn" data-set-lang="pt" title="Português"><span aria-hidden="true">🇧🇷</span> PT</button>
+            </div>
         </nav>
     </div>
 </header>
@@ -29,21 +51,47 @@
 <section class="hero">
     <div class="container">
         <div class="hero-art">
-            <img src="images/app-icon.png" alt="Trick or Sprint app icon: a rabbit in a magician's cape holding a wand" class="app-icon">
+            <img src="images/app-icon.png" alt="Tricky Tiles: Outside the Hat app icon: rabbit ears peeking out of a purple magician's top hat with two playing cards on a teal grid" class="app-icon">
         </div>
-        <p class="studio-tag">An Unranked Studio game</p>
-        <h1>Trick or Sprint</h1>
-        <p class="tagline">Every great magician starts as a rabbit.</p>
-        <p class="pitch">
-            A positional card game where <em>where you stand</em> matters as much as <em>what you play</em>.
-            Hop across the grid, line up your cards and outsmart a circus of balloon animals.
+        <p class="studio-tag">
+            <span data-lang="en">An Unranked Studio game</span>
+            <span data-lang="pt">Um jogo da Unranked Studio</span>
+        </p>
+        <h1>Tricky Tiles: Outside the Hat</h1>
+        <p class="tagline">
+            <span data-lang="en">Every great magician starts as a rabbit.</span>
+            <span data-lang="pt">Todo grande mágico começa como um coelho.</span>
+        </p>
+        <p class="pitch" data-lang="en">
+            A tactical roguelite deckbuilder where <em>where you stand</em> matters as much as <em>what you play</em>.
+            Take over the theater stage, trigger explosive balloon chain reactions and bend the rules of the show across endless waves.
+        </p>
+        <p class="pitch" data-lang="pt">
+            Um <em>roguelite deckbuilder</em> tático em que <em>onde você está</em> importa tanto quanto <em>o que você joga</em>.
+            Assuma o palco do teatro, provoque reações em cadeia explosivas nos balões e manipule as regras do espetáculo em ondas infinitas.
         </p>
 
         <div class="cta-row">
-            <!-- When the app is live, replace this span with:
-                 <a href="https://apps.apple.com/app/YOUR-APP-ID" class="btn btn-primary">Download on the App Store</a> -->
-            <span class="btn btn-soon">Coming soon to the App Store</span>
-            <a href="support.html" class="btn btn-teal">Get support</a>
+            <a href="https://apps.apple.com/us/app/trick-or-sprint/id6814517143?itscg=30200&amp;itsct=apps_box_link&amp;mttnsubad=6814517143" class="btn btn-primary" target="_blank" rel="noopener">
+                <span data-lang="en">Download on the App Store</span>
+                <span data-lang="pt">Baixar na App Store</span>
+            </a>
+            <a href="support.html" class="btn btn-teal">
+                <span data-lang="en">Get support</span>
+                <span data-lang="pt">Obter suporte</span>
+            </a>
+        </div>
+
+        <div class="qr-wrap">
+            <a href="https://apps.apple.com/us/app/trick-or-sprint/id6814517143?itscg=30200&amp;itsct=apps_box_link&amp;mttnsubad=6814517143" class="qr-card" target="_blank" rel="noopener">
+                <img src="images/qr-code.jpg" alt="QR Code to download Tricky Tiles: Outside the Hat on the App Store">
+                <div>
+                    <span class="qr-label" data-lang="en">Scan to download</span>
+                    <span class="qr-label" data-lang="pt">Escaneie para baixar</span>
+                    <span class="qr-sub" data-lang="en">Open directly on your iPhone or iPad</span>
+                    <span class="qr-sub" data-lang="pt">Abra direto no seu iPhone ou iPad</span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -51,33 +99,55 @@
 <!-- ============ THE GAME ============ -->
 <section class="block" id="game">
     <div class="container">
-        <h2>The Game</h2>
-        <p class="lead">
-            Trick or Sprint is a turn-based, positional card game for iPhone and iPad.
-            Every card is a pattern on the grid, so the best move is rarely the strongest card,
-            it's the one you can actually reach.
+        <h2>
+            <span data-lang="en">The Game</span>
+            <span data-lang="pt">O Jogo</span>
+        </h2>
+        <p class="lead" data-lang="en">
+            Tricky Tiles: Outside the Hat is a turn-based, positional deckbuilder for iPhone and iPad.
+            Every battle unfolds on a 5&times;6 stage grid where each card projects a spatial pattern around you—so the best move is rarely the strongest card, it's the one you can actually line up.
+        </p>
+        <p class="lead" data-lang="pt">
+            Tricky Tiles: Outside the Hat é um jogo tático de cartas e posicionamento por turnos para iPhone e iPad.
+            Cada combate acontece em um palco 5&times;6 onde cada carta possui um padrão espacial ao seu redor — então a melhor jogada raramente é a carta mais forte, e sim aquela que você consegue alinhar.
         </p>
 
         <div class="feature-grid">
             <div class="feature">
                 <span class="num">1</span>
-                <h3>Position is power</h3>
-                <p>Cards hit or move you across specific tiles around the rabbit. Step into the right spot first, then strike.</p>
+                <h3>
+                    <span data-lang="en">Tactical 5&times;6 grid</span>
+                    <span data-lang="pt">Combate tático em grid 5&times;6</span>
+                </h3>
+                <p data-lang="en">Cards highlight valid tiles by type with real-time damage and shield previews. Tap any enemy on stage to inspect their deck and plan ahead.</p>
+                <p data-lang="pt">As cartas destacam casas válidas por cor com prévia em tempo real de dano e escudo. Toque em qualquer inimigo no palco para inspecionar o deck dele.</p>
             </div>
             <div class="feature">
                 <span class="num">2</span>
-                <h3>Spend your mana</h3>
-                <p>Three mana each turn and a hand of four cards. Choose between attacking, moving and shielding.</p>
+                <h3>
+                    <span data-lang="en">Instant hand flow</span>
+                    <span data-lang="pt">Mão dinâmica e mana</span>
+                </h3>
+                <p data-lang="en">Hold 4 cards and spend your mana across Movement, Attack, Defend and Effect cards. Every card played is replaced immediately to keep turns snappy.</p>
+                <p data-lang="pt">Mantenha 4 cartas na mão e gerencie sua mana entre Movimento, Ataque, Defesa e Efeito. Cada carta jogada é reposta na hora, mantendo o ritmo ágil.</p>
             </div>
             <div class="feature">
                 <span class="num">3</span>
-                <h3>Fight the balloons</h3>
-                <p>Balloon dogs, turtles and fish want to pop your act. Dodge, outflank and pop them first.</p>
+                <h3>
+                    <span data-lang="en">Pop chain reactions</span>
+                    <span data-lang="pt">Reações em cadeia</span>
+                </h3>
+                <p data-lang="en">Balloon creations pop when defeated, blasting all 8 adjacent tiles around them. Flank and line them up to clear the stage in a single combo.</p>
+                <p data-lang="pt">Inimigos de balão estouram ao serem derrotados, causando dano nos 8 tiles adjacentes. Alinhe seus alvos para criar explosões em cadeia pelo tabuleiro.</p>
             </div>
             <div class="feature">
                 <span class="num">4</span>
-                <h3>Survive the run</h3>
-                <p>Your health carries over from battle to battle. Make every hop count.</p>
+                <h3>
+                    <span data-lang="en">Arena offers &amp; endless waves</span>
+                    <span data-lang="pt">Ofertas de arena e ondas infinitas</span>
+                </h3>
+                <p data-lang="en">Your health, mana and deck upgrades persist between waves. Pick 1 of 3 Arena Offer scrolls—blessed or cursed—after each win and climb the Game Center leaderboard.</p>
+                <p data-lang="pt">Sua vida, mana e melhorias de deck continuam entre as ondas. Escolha 1 de 3 pergaminhos de Oferta de Arena — benéficos ou amaldiçoados — e suba no placar do Game Center.</p>
             </div>
         </div>
     </div>
@@ -88,18 +158,32 @@
     <div class="container">
         <div class="panel story">
             <img src="images/rabbit.png" alt="The rabbit, wearing a tiny top hat and teal cape, holding a magic wand">
-            <div>
+            <div data-lang="en">
                 <h2>The Story</h2>
                 <p>
-                    For years, a rabbit lived inside a magician's top hat, pulled out for the applause
+                    For years, a rabbit lived inside a magician's top hat—pulled out for the applause
                     and tucked away before anyone could ask who they really were.
                 </p>
                 <p>
-                    One night, the rabbit ran. They hopped out of the hat, grabbed a tiny hat and wand of their own,
-                    and set off to prove they're more than someone else's trick.
+                    Tired of being just a prop in someone else's act, the rabbit escaped the hat, grabbed a tiny hat and wand of their own,
+                    and took over the theater stage to settle the score.
                 </p>
                 <p>
-                    Now every step is a sprint, every card is a spell, and the next act is theirs.
+                    Now endless waves of magical creations stand in their way, magic scrolls rewrite the rules of the show between battles, and the spotlight is finally theirs.
+                </p>
+            </div>
+            <div data-lang="pt">
+                <h2>A História</h2>
+                <p>
+                    Durante anos, um coelho viveu dentro da cartola de um mágico — tirado apenas para os aplausos
+                    e guardado antes que alguém pudesse perguntar quem ele realmente era.
+                </p>
+                <p>
+                    Cansado de ser apenas um adereço no show de outra pessoa, o coelho escapou da cartola, pegou sua própria cartolinha e varinha,
+                    e tomou o palco do teatro para acertar as contas.
+                </p>
+                <p>
+                    Agora, ondas infinitas de criações mágicas tentam impedi-lo enquanto pergaminhos de ofertas reescrevem as regras do espetáculo entre os combates — e os holofotes finalmente são dele.
                 </p>
             </div>
         </div>
@@ -109,8 +193,14 @@
 <!-- ============ THE TEAM ============ -->
 <section class="block" id="team">
     <div class="container">
-        <h2>Meet the Team</h2>
-        <p class="lead">Five people behind Unranked Studio and Trick or Sprint.</p>
+        <h2>
+            <span data-lang="en">Meet the Team</span>
+            <span data-lang="pt">Conheça a Equipe</span>
+        </h2>
+        <p class="lead">
+            <span data-lang="en">Five people behind Unranked Studio and Tricky Tiles: Outside the Hat.</span>
+            <span data-lang="pt">Cinco pessoas por trás da Unranked Studio e de Tricky Tiles: Outside the Hat.</span>
+        </p>
 
         <!-- Order alternates the name-label color baked into each photo: gold, teal, gold, teal, gold. -->
         <div class="team-grid">
@@ -127,10 +217,17 @@
 <section class="block" id="studio">
     <div class="container">
         <div class="panel" style="text-align:center;">
-            <h2 style="margin-top:0;">About Unranked Studio</h2>
-            <p style="max-width:680px; margin:0 auto 18px;">
+            <h2 style="margin-top:0;">
+                <span data-lang="en">About Unranked Studio</span>
+                <span data-lang="pt">Sobre a Unranked Studio</span>
+            </h2>
+            <p style="max-width:680px; margin:0 auto 18px;" data-lang="en">
                 Unranked Studio is a five-person indie team making games that are easy to pick up and hard to put down.
                 Questions, feedback or just want to say hi?
+            </p>
+            <p style="max-width:680px; margin:0 auto 18px;" data-lang="pt">
+                A Unranked Studio é uma equipe indie de cinco pessoas criando jogos fáceis de aprender e difíceis de largar.
+                Dúvidas, sugestões ou só quer dar um oi?
             </p>
             <a href="mailto:studio.unranked@gmail.com" class="btn btn-teal">studio.unranked@gmail.com</a>
         </div>
@@ -138,11 +235,64 @@
 </section>
 
 <footer class="site-footer">
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="mailto:studio.unranked@gmail.com">Contact</a>
-    <p>&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <a href="support.html"><span data-lang="en">Support</span><span data-lang="pt">Suporte</span></a>
+    <a href="privacy.html"><span data-lang="en">Privacy Policy</span><span data-lang="pt">Política de Privacidade</span></a>
+    <a href="mailto:studio.unranked@gmail.com"><span data-lang="en">Contact</span><span data-lang="pt">Contato</span></a>
+    <p data-lang="en">&copy; 2026 Unranked Studio. All rights reserved.</p>
+    <p data-lang="pt">&copy; 2026 Unranked Studio. Todos os direitos reservados.</p>
 </footer>
+
+<script>
+    document.querySelectorAll('[data-set-lang]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = btn.getAttribute('data-set-lang');
+            document.documentElement.lang = lang;
+            var title = document.documentElement.getAttribute('data-title-' + lang);
+            if (title) document.title = title;
+            try { localStorage.setItem('unranked_lang', lang); } catch (e) {}
+        });
+    });
+
+    (function() {
+        var navLinks = {
+            home: document.querySelector('[data-nav="home"]'),
+            game: document.querySelector('[data-nav="game"]'),
+            team: document.querySelector('[data-nav="team"]')
+        };
+        var gameSec = document.getElementById('game');
+        var teamSec = document.getElementById('team');
+
+        function setActive(key) {
+            Object.keys(navLinks).forEach(function(k) {
+                if (!navLinks[k]) return;
+                if (k === key) {
+                    navLinks[k].setAttribute('aria-current', 'page');
+                } else {
+                    navLinks[k].removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function updateOnScroll() {
+            var y = window.scrollY + 140;
+            if (teamSec && y >= teamSec.offsetTop) {
+                setActive('team');
+            } else if (gameSec && y >= gameSec.offsetTop) {
+                setActive('game');
+            } else {
+                setActive('home');
+            }
+        }
+
+        window.addEventListener('scroll', updateOnScroll, { passive: true });
+        window.addEventListener('hashchange', function() {
+            if (location.hash === '#team') setActive('team');
+            else if (location.hash === '#game') setActive('game');
+            else setActive('home');
+        });
+        updateOnScroll();
+    })();
+</script>
 
 </body>
 </html>
